@@ -9,40 +9,69 @@
     <title>Paint clone</title>
 </head>
 <body>
-    
-<div class="app">
-    <div class="controls">
-        <div class="title">Paint clone</div>
-        <div class="type">
-
-
-            <input type="radio" name="pen-type" id="pen-pencil" checked>
-            <label for="pen-pencil">
-            <i class="fa fa-pencil"></i>
-            </label>
-  <input type="radio" name="pen-type" id="pen-pencil">
-            <label for="pen-brush">
-            <i class="fa fa-paint-brush"></i>
-            </label>
-
-<div class="size">
-    <label for="pen-size">Size</label>
-    <input type="range" id="pen-size" min="1" max="50">
-</div>
-
-
-<div class="color">
-    <label for="pen-color">Color</label>
-    <input type="color" id="pen-color" value="#000">
-</div>
-
-<div class="actions">
-    <button id="reset-canvas">Canvas</button>
-    <button id="save-canvas">save</button>
-</div>
+  <!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drawing App JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="tools-board">
+        <div class="row">
+            <li class="option">
+                
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill color</label>
+            </li>
+          </ul>
         </div>
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <i class="fa-solid fa-paintbrush"></i>
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <i class="fa-solid fa-eraser"></i>
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Clear</button>
+          <button class="save-img" ><i class="fa-sharp fa-solid fa-download"></i>Save</button>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
     </div>
-</div>
+    
+  </body>
+</html>
+  
+  
 
 
     <script src="index.js"></script>
